@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiReferral" table="CI_REFERRAL" catalog="CI_DB">
+        <id name="referralId" type="int">
+            <column name="REFERRAL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="referredBy" type="java.lang.Integer">
+            <column name="REFERRED_BY" />
+        </property>
+        <property name="referredOn" type="date">
+            <column name="REFERRED_ON" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

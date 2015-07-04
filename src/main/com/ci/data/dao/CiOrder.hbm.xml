@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiOrder" table="CI_ORDER" catalog="CI_DB">
+        <id name="orderId" type="int">
+            <column name="ORDER_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderedRecipe" type="java.lang.Integer">
+            <column name="ORDERED_RECIPE" />
+        </property>
+        <property name="orderedBy" type="java.lang.Integer">
+            <column name="ORDERED_BY" />
+        </property>
+        <property name="sellerId" type="java.lang.Integer">
+            <column name="SELLER_ID" />
+        </property>
+        <property name="billId" type="java.lang.Integer">
+            <column name="BILL_ID" />
+        </property>
+        <property name="couponId" type="java.lang.Integer">
+            <column name="COUPON_ID" />
+        </property>
+        <property name="requestDesc" type="string">
+            <column name="REQUEST_DESC" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

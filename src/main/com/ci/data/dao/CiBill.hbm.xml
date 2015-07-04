@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiBill" table="CI_BILL" catalog="CI_DB">
+        <id name="billId" type="int">
+            <column name="BILL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="QUANTITY" />
+        </property>
+        <property name="discount" type="java.lang.Integer">
+            <column name="DISCOUNT" />
+        </property>
+        <property name="tax" type="java.lang.Integer">
+            <column name="TAX" />
+        </property>
+        <property name="addressId" type="java.lang.Integer">
+            <column name="ADDRESS_ID" />
+        </property>
+        <property name="totalPayable" type="java.lang.Integer">
+            <column name="TOTAL_PAYABLE" />
+        </property>
+        <property name="paymentId" type="java.lang.Integer">
+            <column name="PAYMENT_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

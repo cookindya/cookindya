@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiAddress" table="CI_ADDRESS" catalog="CI_DB">
+        <id name="addressId" type="int">
+            <column name="ADDRESS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="billing" type="string">
+            <column name="BILLING" length="200" />
+        </property>
+        <property name="shippingAddr1" type="string">
+            <column name="SHIPPING_ADDR1" length="200" />
+        </property>
+        <property name="shippingAddr2" type="string">
+            <column name="SHIPPING_ADDR2" length="200" />
+        </property>
+        <property name="shippingAddr3" type="string">
+            <column name="SHIPPING_ADDR3" length="200" />
+        </property>
+        <property name="shippingAddr4" type="string">
+            <column name="SHIPPING_ADDR4" length="200" />
+        </property>
+        <property name="shippingAddr5" type="string">
+            <column name="SHIPPING_ADDR5" length="200" />
+        </property>
+        <property name="shippingAddr6" type="string">
+            <column name="SHIPPING_ADDR6" length="200" />
+        </property>
+        <property name="shippingAddr7" type="string">
+            <column name="SHIPPING_ADDR7" length="200" />
+        </property>
+        <property name="shippingAddr8" type="string">
+            <column name="SHIPPING_ADDR8" length="200" />
+        </property>
+        <property name="shippingAddr9" type="string">
+            <column name="SHIPPING_ADDR9" length="200" />
+        </property>
+        <property name="shippingAddr10" type="string">
+            <column name="SHIPPING_ADDR10" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

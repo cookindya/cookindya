@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiFavourities" table="CI_FAVOURITIES" catalog="CI_DB">
+        <id name="favouriteId" type="int">
+            <column name="FAVOURITE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="recipeId" type="java.lang.Integer">
+            <column name="RECIPE_ID" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

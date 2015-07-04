@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiRating" table="CI_RATING" catalog="CI_DB">
+        <id name="ratingId" type="int">
+            <column name="RATING_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="hygiene" type="java.lang.Integer">
+            <column name="HYGIENE" />
+        </property>
+        <property name="taste" type="java.lang.Integer">
+            <column name="TASTE" />
+        </property>
+        <property name="freshness" type="java.lang.Integer">
+            <column name="FRESHNESS" />
+        </property>
+        <property name="delivery" type="java.lang.Integer">
+            <column name="DELIVERY" />
+        </property>
+    </class>
+</hibernate-mapping>

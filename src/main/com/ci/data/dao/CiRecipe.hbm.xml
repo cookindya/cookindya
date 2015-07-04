@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2015 7:39:07 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="CiRecipe" table="CI_RECIPE" catalog="CI_DB">
+        <id name="recipeId" type="int">
+            <column name="RECIPE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="recipeName" type="string">
+            <column name="RECIPE_NAME" length="50" />
+        </property>
+        <property name="recipePrice" type="java.lang.Integer">
+            <column name="RECIPE_PRICE" />
+        </property>
+        <property name="recipeDiet" type="java.lang.Integer">
+            <column name="RECIPE_DIET" />
+        </property>
+        <property name="recipeIngredients" type="string">
+            <column name="RECIPE_INGREDIENTS" length="200" />
+        </property>
+        <property name="recipeImage" type="binary">
+            <column name="RECIPE_IMAGE" />
+        </property>
+        <property name="recipeAddedBy" type="java.lang.Integer">
+            <column name="RECIPE_ADDED_BY" />
+        </property>
+        <property name="recipeAddedOn" type="date">
+            <column name="RECIPE_ADDED_ON" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
