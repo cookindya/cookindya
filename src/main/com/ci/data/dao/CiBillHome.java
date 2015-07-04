@@ -4,6 +4,8 @@ import javax.persistence.PersistenceContext;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import com.ci.data.Bill;
 /**
  * Home object for domain model class CiBill.
  * @see .CiBill

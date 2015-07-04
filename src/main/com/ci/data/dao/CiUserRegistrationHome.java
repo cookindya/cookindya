@@ -3,8 +3,11 @@ package com.ci.data.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import com.ci.data.UserRegistration;
 
 /**
  * Home object for domain model class CiUserRegistration.

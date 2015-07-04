@@ -17,7 +17,7 @@ public class CiPaymentTypesHome {
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(CiPaymentTypes transientInstance) {
+	public void persist(CiPaymentTypesHome transientInstance) {
 		log.debug("persisting CiPaymentTypes instance");
 		try {
 			entityManager.persist(transientInstance);
