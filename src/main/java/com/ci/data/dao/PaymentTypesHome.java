@@ -2,23 +2,26 @@ package com.ci.data.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.ci.data.PaymentTypes;
+
 /**
- * Home object for domain model class CiRating.
- * @see .CiRating
+ * Home object for domain model class PaymentTypes.
+ * @see .PaymentTypes
  * @author itspritish
  */
-public class CiRatingHome {
+public class PaymentTypesHome {
 
-	private static final Log log = LogFactory.getLog(CiRatingHome.class);
+	private static final Log log = LogFactory.getLog(PaymentTypesHome.class);
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(Rating transientInstance) {
-		log.debug("persisting CiRating instance");
+	public void persist(PaymentTypesHome transientInstance) {
+		log.debug("persisting PaymentTypes instance");
 		try {
 			entityManager.persist(transientInstance);
 			log.debug("persist successful");
@@ -28,8 +31,8 @@ public class CiRatingHome {
 		}
 	}
 
-	public void remove(Rating persistentInstance) {
-		log.debug("removing CiRating instance");
+	public void remove(PaymentTypes persistentInstance) {
+		log.debug("removing PaymentTypes instance");
 		try {
 			entityManager.remove(persistentInstance);
 			log.debug("remove successful");
@@ -39,10 +42,10 @@ public class CiRatingHome {
 		}
 	}
 
-	public Rating merge(Rating detachedInstance) {
-		log.debug("merging CiRating instance");
+	public PaymentTypes merge(PaymentTypes detachedInstance) {
+		log.debug("merging PaymentTypes instance");
 		try {
-			Rating result = entityManager.merge(detachedInstance);
+			PaymentTypes result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -51,10 +54,11 @@ public class CiRatingHome {
 		}
 	}
 
-	public Rating findById(int id) {
-		log.debug("getting CiRating instance with id: " + id);
+	public PaymentTypes findById(int id) {
+		log.debug("getting PaymentTypes instance with id: " + id);
 		try {
-			Rating instance = entityManager.find(Rating.class, id);
+			PaymentTypes instance = entityManager.find(PaymentTypes.class,
+					id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {

@@ -2,23 +2,26 @@ package com.ci.data.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.ci.data.Kitchen;
+
 /**
- * Home object for domain model class CiReferral.
- * @see .CiReferral
+ * Home object for domain model class CiKitchen.
+ * @see .CiKitchen
  * @author itspritish
  */
-public class CiReferralHome {
+public class CiKitchenHome {
 
-	private static final Log log = LogFactory.getLog(CiReferralHome.class);
+	private static final Log log = LogFactory.getLog(CiKitchenHome.class);
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(Referral transientInstance) {
-		log.debug("persisting CiReferral instance");
+	public void persist(Kitchen transientInstance) {
+		log.debug("persisting CiKitchen instance");
 		try {
 			entityManager.persist(transientInstance);
 			log.debug("persist successful");
@@ -28,8 +31,8 @@ public class CiReferralHome {
 		}
 	}
 
-	public void remove(Referral persistentInstance) {
-		log.debug("removing CiReferral instance");
+	public void remove(Kitchen persistentInstance) {
+		log.debug("removing CiKitchen instance");
 		try {
 			entityManager.remove(persistentInstance);
 			log.debug("remove successful");
@@ -39,10 +42,10 @@ public class CiReferralHome {
 		}
 	}
 
-	public Referral merge(Referral detachedInstance) {
-		log.debug("merging CiReferral instance");
+	public Kitchen merge(Kitchen detachedInstance) {
+		log.debug("merging CiKitchen instance");
 		try {
-			Referral result = entityManager.merge(detachedInstance);
+			Kitchen result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -51,10 +54,10 @@ public class CiReferralHome {
 		}
 	}
 
-	public Referral findById(int id) {
-		log.debug("getting CiReferral instance with id: " + id);
+	public Kitchen findById(int id) {
+		log.debug("getting CiKitchen instance with id: " + id);
 		try {
-			Referral instance = entityManager.find(Referral.class, id);
+			Kitchen instance = entityManager.find(Kitchen.class, id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {

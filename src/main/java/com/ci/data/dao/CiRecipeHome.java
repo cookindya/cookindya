@@ -2,23 +2,26 @@ package com.ci.data.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.ci.api.Recipe;
+
 /**
- * Home object for domain model class CiPaymentTypes.
- * @see .CiPaymentTypes
+ * Home object for domain model class CiRecipe.
+ * @see .CiRecipe
  * @author itspritish
  */
-public class CiPaymentTypesHome {
+public class CiRecipeHome {
 
-	private static final Log log = LogFactory.getLog(CiPaymentTypesHome.class);
+	private static final Log log = LogFactory.getLog(CiRecipeHome.class);
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(CiPaymentTypesHome transientInstance) {
-		log.debug("persisting CiPaymentTypes instance");
+	public void persist(Recipe transientInstance) {
+		log.debug("persisting CiRecipe instance");
 		try {
 			entityManager.persist(transientInstance);
 			log.debug("persist successful");
@@ -28,8 +31,8 @@ public class CiPaymentTypesHome {
 		}
 	}
 
-	public void remove(CiPaymentTypes persistentInstance) {
-		log.debug("removing CiPaymentTypes instance");
+	public void remove(Recipe persistentInstance) {
+		log.debug("removing CiRecipe instance");
 		try {
 			entityManager.remove(persistentInstance);
 			log.debug("remove successful");
@@ -39,10 +42,10 @@ public class CiPaymentTypesHome {
 		}
 	}
 
-	public CiPaymentTypes merge(CiPaymentTypes detachedInstance) {
-		log.debug("merging CiPaymentTypes instance");
+	public Recipe merge(Recipe detachedInstance) {
+		log.debug("merging CiRecipe instance");
 		try {
-			CiPaymentTypes result = entityManager.merge(detachedInstance);
+			Recipe result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -51,11 +54,10 @@ public class CiPaymentTypesHome {
 		}
 	}
 
-	public CiPaymentTypes findById(int id) {
-		log.debug("getting CiPaymentTypes instance with id: " + id);
+	public Recipe findById(int id) {
+		log.debug("getting CiRecipe instance with id: " + id);
 		try {
-			CiPaymentTypes instance = entityManager.find(CiPaymentTypes.class,
-					id);
+			Recipe instance = entityManager.find(Recipe.class, id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {

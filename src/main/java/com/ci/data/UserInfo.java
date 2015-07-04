@@ -10,6 +10,7 @@ import javax.persistence.Table;
 /**
  * CiUserInfo  
  */
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "CI_USER_INFO", catalog = "CI_DB")
 public class UserInfo implements java.io.Serializable {

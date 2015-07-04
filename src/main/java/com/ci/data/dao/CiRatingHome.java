@@ -2,23 +2,26 @@ package com.ci.data.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.ci.data.Rating;
+
 /**
- * Home object for domain model class CiRecipe.
- * @see .CiRecipe
+ * Home object for domain model class CiRating.
+ * @see .CiRating
  * @author itspritish
  */
-public class CiRecipeHome {
+public class CiRatingHome {
 
-	private static final Log log = LogFactory.getLog(CiRecipeHome.class);
+	private static final Log log = LogFactory.getLog(CiRatingHome.class);
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(Recipe transientInstance) {
-		log.debug("persisting CiRecipe instance");
+	public void persist(Rating transientInstance) {
+		log.debug("persisting CiRating instance");
 		try {
 			entityManager.persist(transientInstance);
 			log.debug("persist successful");
@@ -28,8 +31,8 @@ public class CiRecipeHome {
 		}
 	}
 
-	public void remove(Recipe persistentInstance) {
-		log.debug("removing CiRecipe instance");
+	public void remove(Rating persistentInstance) {
+		log.debug("removing CiRating instance");
 		try {
 			entityManager.remove(persistentInstance);
 			log.debug("remove successful");
@@ -39,10 +42,10 @@ public class CiRecipeHome {
 		}
 	}
 
-	public Recipe merge(Recipe detachedInstance) {
-		log.debug("merging CiRecipe instance");
+	public Rating merge(Rating detachedInstance) {
+		log.debug("merging CiRating instance");
 		try {
-			Recipe result = entityManager.merge(detachedInstance);
+			Rating result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -51,10 +54,10 @@ public class CiRecipeHome {
 		}
 	}
 
-	public Recipe findById(int id) {
-		log.debug("getting CiRecipe instance with id: " + id);
+	public Rating findById(int id) {
+		log.debug("getting CiRating instance with id: " + id);
 		try {
-			Recipe instance = entityManager.find(Recipe.class, id);
+			Rating instance = entityManager.find(Rating.class, id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {
