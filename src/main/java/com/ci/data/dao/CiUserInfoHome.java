@@ -19,6 +19,14 @@ public class CiUserInfoHome {
 
 	@PersistenceContext
 	private EntityManager entityManager;
+	
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
+    @PersistenceContext
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
 	public void persist(UserInfo transientInstance) {
 		log.debug("persisting CiUserInfo instance");
