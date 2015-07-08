@@ -22,16 +22,6 @@
 					<webXml>WebContent\WEB-INF\web.xml</webXml>
 				</configuration>
 			</plugin>
-			<plugin>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<!-- <warSourceDirectory>WebContent</warSourceDirectory> <failOnMissingWebXml>false</failOnMissingWebXml> -->
-					<url>http://localhost:8080/manager</url>
-					<server>TomcatServer</server>
-					<path>/cookindya</path>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
@@ -40,7 +30,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.0.1.Final</version>
+			<version>4.3.1.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -53,15 +43,27 @@
 			<version>4.0.1.Final</version>
 			<classifier>tests</classifier>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
 			<version>1.0.1.Final</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.0.1.Final</version>
+			  <exclusions>
+			    <exclusion>  
+			      <groupId>org.jboss.spec.javax.transaction</groupId>
+			      <artifactId>jboss-transaction-api_1.1_spec</artifactId>
+			    </exclusion>
+			    
+			    <exclusion>  
+			      <groupId>org.hibernate.javax.persistence</groupId>
+			      <artifactId>hibernate-jpa-2.0-api</artifactId>
+			    </exclusion>
+			  </exclusions> 
+			
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -106,8 +108,11 @@
 	<version>1.2</version>
 </dependency>
 
+
+
+  
 	</dependencies>
-	<repositories>
+<!-- 	<repositories>
 		<repository>
 			<snapshots>
 				<enabled>false</enabled>
@@ -129,5 +134,5 @@
 			<name>Maven Plugin Repository</name>
 			<url>http://repo1.maven.org/maven2</url>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories> -->
 </project>

@@ -2,9 +2,6 @@ package com.ci.data.dao;
 
 import java.io.Serializable;
 import java.util.List;
-
-import javax.transaction.Transactional;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Session;

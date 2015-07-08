@@ -170,4 +170,17 @@ public class UserInfo implements java.io.Serializable {
 		this.preferredShipping = preferredShipping;
 	}
 
+	@Override
+	public String toString() {
+		return "UserInfo [userInfoId=" + userInfoId + ", userName=" + userName
+				+ ", userRegId=" + userRegId + ", userAddress=" + userAddress
+				+ ", phNumPrimary=" + phNumPrimary + ", phNumSecondary="
+				+ phNumSecondary + ", feedbackId=" + feedbackId + ", fameId="
+				+ fameId + ", kitchenId=" + kitchenId + ", isSeller="
+				+ isSeller + ", isMobileAppUser=" + isMobileAppUser
+				+ ", preferredShipping=" + preferredShipping + "]";
+	}
+
+	
+	
 }
