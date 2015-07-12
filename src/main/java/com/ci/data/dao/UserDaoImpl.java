@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 import com.ci.data.UserInfo;
 
 @Transactional
-public class UserDaoImpl extends CookIndyaDaoImpl<UserInfo> implements UserDao<UserInfo>{
+public class UserDaoImpl extends CookIndyaDaoImpl<UserInfo> implements UserDao{
 
 
 	public UserDaoImpl(Class<UserInfo> clasInput) {
