@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.Query;
 
-import com.ci.api.constants.RecipeCategory;
+import com.ci.constants.RecipeCategory;
 import com.ci.data.Recipe;
 
 public class RecipeDaoImpl extends CookIndyaDaoImpl<Recipe> implements

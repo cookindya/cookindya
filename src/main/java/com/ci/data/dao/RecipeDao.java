@@ -2,7 +2,7 @@ package com.ci.data.dao;
 
 import java.util.List;
 
-import com.ci.api.constants.RecipeCategory;
+import com.ci.constants.RecipeCategory;
 import com.ci.data.Recipe;
 
 public interface RecipeDao extends CookIndyaDao<Recipe>{
