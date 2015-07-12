@@ -12,7 +12,6 @@ public class RecipeDaoImpl extends CookIndyaDaoImpl<Recipe> implements
 
 	public RecipeDaoImpl(Class<Recipe> clasInput) {
 		super(clasInput);
-		// TODO Auto-generated constructor stub
 	}
 
 	@SuppressWarnings("unchecked")
