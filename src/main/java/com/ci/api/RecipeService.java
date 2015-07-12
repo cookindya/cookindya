@@ -17,7 +17,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.ci.data.Recipe;
-import com.ci.data.UserInfo;
 import com.ci.data.dao.RecipeDao;
 import com.ci.data.dao.RecipeDaoImpl;
 import com.google.gson.Gson;
