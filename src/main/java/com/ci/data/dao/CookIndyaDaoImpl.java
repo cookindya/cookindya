@@ -26,7 +26,6 @@ public abstract class CookIndyaDaoImpl<T extends Serializable> implements CookIn
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	@Transactional
 	public T getById(Long id) {
 		Transaction tx = this.getCurrentSession().beginTransaction();
 		T entity = (T) this.getCurrentSession().get(this.clas, new Integer(id.toString()));

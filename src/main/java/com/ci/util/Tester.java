@@ -19,7 +19,7 @@ public class Tester {
 		try {
  
 			UserInfo user = new UserInfo();
-			user.setUserInfoId(650001);
+			user.setUserInfoId(650007);
 			user.setUserName("HK");
 			user.setIsSeller("Y");
 			user.setIsMobileAppUser("Y");

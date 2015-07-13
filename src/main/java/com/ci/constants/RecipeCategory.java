@@ -1,4 +1,4 @@
-package com.ci.api.constants;
+package com.ci.constants;
 
 public enum RecipeCategory {
 	

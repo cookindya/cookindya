@@ -24,7 +24,7 @@ public class UserService {
 
 	@Path("{userid}")
 	@GET
-	@Produces("application/json")
+	@Produces(MediaType.APPLICATION_JSON)
 	public String getUser(@PathParam("{userid}") long userId) throws JSONException {
 
 		UserDao userDAO = new UserDaoImpl(UserInfo.class);
