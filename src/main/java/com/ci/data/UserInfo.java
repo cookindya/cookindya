@@ -2,11 +2,16 @@ package com.ci.data;
  
  
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 
@@ -35,6 +40,12 @@ public class UserInfo implements java.io.Serializable {
 	private String isSeller;
 	private String isMobileAppUser;
 	private String preferredShipping;
+	
+	
+	@OneToOne(fetch = FetchType.LAZY )
+	@PrimaryKeyJoinColumn
+	private UserRegistration userRegistration;
+	
 
 	public UserInfo() {
 	}
@@ -168,6 +179,16 @@ public class UserInfo implements java.io.Serializable {
 
 	public void setPreferredShipping(String preferredShipping) {
 		this.preferredShipping = preferredShipping;
+	}
+	
+
+	
+	public UserRegistration getUserRegistration() {
+		return this.userRegistration;
+	}
+
+	public void setUserRegistration(UserRegistration userRegistration) {
+		this.userRegistration = userRegistration;
 	}
 
 	@Override

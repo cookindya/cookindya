@@ -3,12 +3,20 @@ package com.ci.data;
  
 
 import java.util.Date;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.Cascade;
 
 /**
  * CiUserRegistration  
@@ -24,6 +32,9 @@ public class UserRegistration implements java.io.Serializable {
 	private Date expiry;
 	private String blocked;
 	private String isAdmin;
+	
+	@OneToOne(fetch = FetchType.LAZY,mappedBy = "userRegistration", cascade=CascadeType.ALL)
+	private UserInfo userInfo;
 
 	public UserRegistration() {
 	}
@@ -45,6 +56,7 @@ public class UserRegistration implements java.io.Serializable {
 	}
 
 	@Id
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "USER_REGISTRATION_ID", unique = true, nullable = false)
 	public int getUserRegistrationId() {
 		return this.userRegistrationId;
@@ -109,5 +121,16 @@ public class UserRegistration implements java.io.Serializable {
 	public void setIsAdmin(String isAdmin) {
 		this.isAdmin = isAdmin;
 	}
+
+	
+	public UserInfo getUserInfo() {
+		return this.userInfo;
+	}
+
+	public void setUserInfo(UserInfo userInfo) {
+		this.userInfo = userInfo;
+	}
+	
+	
 
 }

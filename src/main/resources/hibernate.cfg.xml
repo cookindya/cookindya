@@ -6,10 +6,16 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Database connection settings -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://50.62.209.75:3306/CI_DB</property>
         <property name="connection.username">cookIndyaAdmin</property>
-        <property name="connection.password">Cookindya@123</property>
+        <property name="connection.password">Cookindya@123</property> -->
+        
+         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/CI_DB</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+         
          
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
@@ -24,10 +30,13 @@
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
          
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
          
-        <property name="hbm2ddl.auto">validate</property>
+          <!-- <property name="hbm2ddl.auto">update</property> -->
          
+         
+         <mapping class="com.ci.data.UserRegistration"/> 
          <mapping class="com.ci.data.UserInfo"/>
+        
     </session-factory>
 </hibernate-configuration>

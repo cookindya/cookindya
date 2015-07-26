@@ -3,7 +3,7 @@ package com.ci.data.dao;
 import java.io.Serializable;
 import java.util.List;
 
-public interface CookIndyaDao<T extends Serializable> {
+public interface CookIndyaDao<T extends Serializable>{
 
 	public T getById(final Long id);
 	public List<T> getAll();
