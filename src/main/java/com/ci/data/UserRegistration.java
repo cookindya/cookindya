@@ -32,10 +32,8 @@ public class UserRegistration implements java.io.Serializable {
 	private Date expiry;
 	private String blocked;
 	private String isAdmin;
-	
-	@OneToOne(fetch = FetchType.LAZY,mappedBy = "userRegistration", cascade=CascadeType.ALL)
 	private UserInfo userInfo;
-
+	
 	public UserRegistration() {
 	}
 
@@ -122,7 +120,7 @@ public class UserRegistration implements java.io.Serializable {
 		this.isAdmin = isAdmin;
 	}
 
-	
+	@OneToOne(fetch = FetchType.LAZY,mappedBy = "userRegistration", cascade=CascadeType.ALL)
 	public UserInfo getUserInfo() {
 		return this.userInfo;
 	}

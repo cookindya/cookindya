@@ -40,11 +40,10 @@ public class UserInfo implements java.io.Serializable {
 	private String isSeller;
 	private String isMobileAppUser;
 	private String preferredShipping;
-	
-	
-	@OneToOne(fetch = FetchType.LAZY )
-	@PrimaryKeyJoinColumn
 	private UserRegistration userRegistration;
+	
+	
+	
 	
 
 	public UserInfo() {
@@ -182,7 +181,8 @@ public class UserInfo implements java.io.Serializable {
 	}
 	
 
-	
+	@OneToOne(fetch = FetchType.LAZY )
+	@PrimaryKeyJoinColumn
 	public UserRegistration getUserRegistration() {
 		return this.userRegistration;
 	}
