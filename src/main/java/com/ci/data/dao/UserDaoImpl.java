@@ -26,16 +26,6 @@ public class UserDaoImpl extends CookIndyaDaoImpl<UserInfo> implements UserDao{
 		return (List<UserInfo>)getAllCooks.getResultList();
 	}
 
-	@Override
-	public String registerNewUser(UserRegistration userRegsData) {		
-		Transaction tx = this.getCurrentSession().beginTransaction();		
-		UserInfo userinfo = new UserInfo();	
-		userinfo.setIsMobileAppUser("N");
-		userRegsData.setUserInfo(userinfo);
-		userinfo.setUserRegistration(userRegsData);
-		Integer id = (Integer) this.getCurrentSession().save(userRegsData);
-		tx.commit();
-		return null;
-	}
+	
 
 }

@@ -96,13 +96,13 @@ public class UserService {
 			
 			UserRegistrationDao userRegsDao = new UserRegistrationDaoImpl(UserRegistration.class);
 								
-			userRegsDao.create(userRegs);
+			userRegsDao.registerNewUser(userRegs);
 			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
-		return Response.status(200).entity(userRegs).build();
+		return Response.status(200).entity(userRegs.getUserInfo()).build();
 	}
 	
 	
