@@ -15,8 +15,8 @@ public class UserRegistrationDaoImpl  extends CookIndyaDaoImpl<UserRegistration>
 	@Override
 	public String registerNewUser(UserRegistration userRegsData) {		
 		Transaction tx = this.getCurrentSession().beginTransaction();		
-		UserInfo userinfo = new UserInfo();	
-		userinfo.setIsMobileAppUser("N");
+		UserInfo userinfo = new UserInfo();
+		userinfo.setUserName(userRegsData.getUserName());
 		userRegsData.setUserInfo(userinfo);
 		userinfo.setUserRegistration(userRegsData);
 		Integer id = (Integer) this.getCurrentSession().save(userRegsData);

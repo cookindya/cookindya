@@ -31,7 +31,9 @@ public class UserRegistration implements java.io.Serializable {
 	private Date startDate;
 	private Date expiry;
 	private String blocked;
+	private String userType;
 	private String isAdmin;
+	private String emailId;
 	private UserInfo userInfo;
 	
 	public UserRegistration() {
@@ -127,6 +129,24 @@ public class UserRegistration implements java.io.Serializable {
 
 	public void setUserInfo(UserInfo userInfo) {
 		this.userInfo = userInfo;
+	}
+
+	@Column(name = "USER_TYPE", length = 60)
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	@Column(name = "EMAIL_ID", length = 100)
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 	
 	
